@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage BackgroundColor="LightGoldenrodYellow"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Dentist.Pages.MenuPage">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Cabinete" TextColor="DarkRed" BackgroundColor="LightGray" Clicked="Cabinete_OnClicked">
+            </Button>
+            <Button Text="Clienti" TextColor="DarkRed" BackgroundColor="LightGray" Clicked="Clienti_OnClicked">
+            </Button>
+            <Button Text="Programari" TextColor="DarkRed" BackgroundColor="LightGray" Clicked="Programari_OnClicked">
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

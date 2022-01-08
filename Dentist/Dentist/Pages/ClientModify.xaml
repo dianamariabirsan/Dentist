@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage BackgroundColor="LightGoldenrodYellow"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Dentist.Pages.ClientModify" 
+    Title="Adauga un nou client">
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView Intent="Form">
+                <TableRoot>
+                    <TableSection Title="Client" TextColor="Black">
+                        <EntryCell Label="Nume" Placeholder="Nume" x:Name="txtNume" Keyboard="Text" LabelColor="DarkRed"/>
+                        <EntryCell Label="Prenume" Placeholder="Prenume" x:Name="txtPrenume" Keyboard="Text" LabelColor="DarkRed"/>
+                        <EntryCell Label="Telefon" Placeholder="Adresa" x:Name="txtTelefon" Keyboard="Telephone" LabelColor="DarkRed"/>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Modifica" Clicked="Save_Clicked"/>
+        <ToolbarItem Text="Renunta" Clicked="Cancel_Clicked"/>
+    </ContentPage.ToolbarItems>
+</ContentPage>

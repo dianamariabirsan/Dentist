@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage BackgroundColor="LightGoldenrodYellow"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:Dentist.Pages"
+    mc:Ignorable="d"
+    x:Class="Dentist.Pages.ClientPage"
+    Title="Clienti">
+
+    <d:ContentPage.BindingContext>
+        <local:ClientPage/>
+    </d:ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <CollectionView x:Name="blobCollectionView" 
+                        SelectionMode="Single">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10">
+                        <Frame HasShadow="True" BackgroundColor="LightBlue" BorderColor="Black" CornerRadius="5">
+                            <StackLayout Orientation="Horizontal">
+                                <Label TextColor="Black" Text="{Binding Nume}"/>
+                                <Label TextColor="Black" Text="{Binding Prenume}"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            <CollectionView.EmptyView>
+                <StackLayout>
+                    <Label VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                           Text="Nu exista clienti definiti"/>
+                </StackLayout>
+            </CollectionView.EmptyView>
+        </CollectionView>
+    </ContentPage.Content>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Adauga" Clicked="Adauga_Clicked"/>
+        <ToolbarItem Text="Modifica" Clicked="Modifica_Clicked"/>
+        <ToolbarItem Text="Sterge" Clicked="Sterge_Clicked"/>
+        <ToolbarItem Text="Sterge Toate" Clicked="DeleteAll_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+</ContentPage>

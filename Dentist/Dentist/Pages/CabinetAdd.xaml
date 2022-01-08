@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage BackgroundColor="LightGoldenrodYellow"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Dentist.Pages.CabinetAdd" 
+    Title="Adauga un cabinet nou">
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView Intent="Form">
+                <TableRoot>
+                    <TableSection Title="Cabinet" TextColor="Black">
+                        <EntryCell Label="Nume" Placeholder="Introdu Nume" x:Name="txtNume" Keyboard="Text" LabelColor="DarkRed"/>
+                        <EntryCell Label="Adresa" Placeholder="Introdu Adresa" x:Name="txtAdresa" Keyboard="Text" LabelColor="DarkRed"/>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Adauga" Clicked="Save_Clicked"/>
+        <ToolbarItem Text="Renunta" Clicked="Cancel_Clicked"/>
+    </ContentPage.ToolbarItems>
+</ContentPage>
